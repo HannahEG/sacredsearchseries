@@ -18,24 +18,24 @@ def home():
 #-------Route will return the webpage with turnout based on voter demographics: visualizations
 
 
-@app.route("/Schedule")
+@app.route("/schedule")
 def Schedule():
     return render_template ("schedule.html")
 
 
-@app.route("/Faithstatement")
+@app.route("/faithstatement")
 #----- Route will return the webpage with reasons why people don't turn out: visualizations
 def Faithstatement():
     return render_template ("faithstatement.html")
 
 
-@app.route("/Guidelines")
+@app.route("/guidelines")
 #---- Route will return the webpage with visualizations depicting turnout based on voter competitiveness
 def Guidelines():
     return render_template("guidelines.html")
 
 
-@app.route("/Chapter1")
+@app.route("/ghapter1")
 #---- Route will return the webpage with visualizations depicting turnout based on voter competitiveness
 def Chapter1():
     return render_template("chapter1.html")
