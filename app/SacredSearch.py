@@ -35,7 +35,7 @@ def Guidelines():
     return render_template("guidelines.html")
 
 
-@app.route("/ghapter1")
+@app.route("/chapter1")
 #---- Route will return the webpage with visualizations depicting turnout based on voter competitiveness
 def Chapter1():
     return render_template("chapter1.html")
