@@ -3,4 +3,3 @@ gunicorn
 django-heroku
 Flask
 pandas
-python
