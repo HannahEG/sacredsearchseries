@@ -1,8 +1,6 @@
-django
+
 gunicorn
 django-heroku
 Flask
 pandas
-numpy
-joblib
-sklearn
+python
