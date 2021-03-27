@@ -39,7 +39,7 @@ def Guidelines():
 #---- Route will return the webpage with visualizations depicting turnout based on voter competitiveness
 def Chapter1():
     return render_template("chapter1.html")
-
+ 
 
 if __name__ == "__main__":
     app.run()
