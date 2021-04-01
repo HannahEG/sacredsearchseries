@@ -42,7 +42,7 @@ def Chapter1():
 
 @app.route("/chapter2-3")
 #---- Route will return the webpage with visualizations depicting turnout based on voter competitiveness
-def Chapter1():
+def Chaptertwothree():
     return render_template("chapter2-3.html")
  
 
