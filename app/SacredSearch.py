@@ -34,6 +34,11 @@ def Faithstatement():
 def Guidelines():
     return render_template("guidelines.html")
 
+@app.route("/facilitators")
+#---- Route will return the webpage with visualizations depicting turnout based on voter competitiveness
+def Facilitators():
+    return render_template("facilitators.html")
+
 
 @app.route("/chapter1")
 #---- Route will return the webpage with visualizations depicting turnout based on voter competitiveness
@@ -48,4 +53,4 @@ def Chaptertwothree():
 
 if __name__ == "__main__":
     app.run()
-    
+
