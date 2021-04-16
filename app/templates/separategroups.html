@@ -1,0 +1,722 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Small Groups for Guys and for Girls</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {color:rgba(55, 53, 47, 0.09)
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head>
+<body><article id="2ccb5153-773e-43b2-878c-8c2b9906d5eb" class="page sans">
+	<header><h1 class="page-title">Small Groups: Guys & Girls</h1>
+<a href="https://sacredsearch.herokuapp.com/facilitators"><b>Back</b></a>
+
+
+<div id="e2f46665-524c-4e74-8ac0-736d9ab37bc3" class="column">
+	<div id="d3cb01ad-470f-48a1-ab38-e5fd1b4209f8" style="width:33.333333333333336%" class="column-list">
+	<!--<p id="5d5b03d6-3bf1-4b1d-8d69-18d0d0962dde" class="">Weekly groups:</p>
+	<ul id="d85b175a-33b1-45d5-b861-a8c45de0917a" class="toggle">
+		<li><details open=""><summary>Bryant, Leo, Amanda</summary>
+	<p id="fd291c00-1b4e-44c1-8eb2-e143fb473792" class="">Erin</p>
+	<p id="9b68b606-1d94-48d3-b253-b9685a2c1dcc" class="">Lulu</p>
+	<p id="570aec65-2356-469b-9a20-3f81b1f5fb80" class="">Michelle</p>
+	<p id="6a322788-f02f-4d4d-b294-6fe3ef87a940" class="">Josh Ogletree</p>
+	<p id="b5fcf21a-ef6c-44bb-a957-aa7dc7bdbce0" class="">Sam Trevizo</p>
+	<p id="3600fd14-4a39-4f6a-94fd-70c96d2c34d4" class="">Carly</p>
+	<p id="4ebeaa5e-fb76-4820-81a3-92ee9d169108" class="">Matt</p>
+	<p id="6155e4a6-872e-4b64-9941-a3b15f701d59" class="">Jack</p>
+</details></li></ul>
+<ul id="fe7f05cf-e977-4328-a4e3-6f882f825480" class="toggle">
+	<li><details open=""><summary>Jason, Jackie, Monica</summary>
+		<p id="4ce106ec-2b58-4e0b-8632-9f422d858a4a" class="">Shelby</p>
+		<p id="d424bfc6-ffde-4fbf-828c-58830f4710bd" class="">Kaylana</p>
+		<p id="6409555b-1fe2-4282-95f9-043c66206819" class="">Franky</p>
+		<p id="f372dd17-9055-4659-bec1-9a24cb19a05e" class="">Kaitlyn</p>
+		<p id="89acfd8b-b381-457b-b454-5777974de66c" class="">Derek</p>
+		<p id="c5117061-33ac-468e-84b2-e0df809ad87c" class="">Josh Mckee</p>
+		<p id="26724f50-6778-4686-89b4-2a6fc4415196" class="">Sam Munoz</p>
+		<p id="3d7822b6-6c6a-462d-8dd7-a9bd7763525e" class="">Sylvia</p>
+		<p id="e37eeab4-ade5-4b4c-a0f4-fb3c66fb7d38" class="">Marina</p>
+	</details></li></ul>
+	<ul id="2a6a829e-8232-48b3-bc49-ebe5266df3b5" class="toggle">
+		<li><details open=""><summary>Joel, Hannah</summary>
+			<p id="142a7a41-3f2b-46e6-81e6-f16690a80cb0" class="">Angelica</p>
+			<p id="9a6da7e1-3526-4765-90ca-105e27e6c537" class="">Evan</p>
+			<p id="f6831e8c-dfec-41bd-a6b4-d56a52b39976" class="">Sandra</p>
+			<p id="b4014c0c-d575-4c40-ba00-38bf1c44ef9b" class="">Paul</p>
+			<p id="270b44d3-a07d-4545-add9-009e13e16148" class="">Ana L</p>
+			<p id="2e3bca9c-53b2-4fdc-aa5c-53abbc40cdeb" class="">Nicki Licking</p>
+			<p id="f39c133a-ed23-4efa-9d8e-01e813662b3f" class="">Jonathan</p>
+			<p id="aeddabc1-fee6-49ba-b543-0b31fc76cec5" class="">Gracie</p>
+			<p id="b0485165-b07b-4015-89c2-548722dde6d9" class="">Ben</p>
+		</details></li></ul></div> -->
+
+	<div id="b6915741-5eda-4d5c-a5ca-141060500cc3" style="width:33.333333333333336%" class="column">
+	<p id="851ac388-f85e-456e-a09b-bc841a93382f" class="">Friday&#x27;s Groups</p>
+	<ul id="f7e50305-e57d-40d8-bd3a-20606b0a8cbe" class="toggle">
+		<li><details close=""><summary>Amanda</summary>
+			<p id="422de006-5afe-4ed8-ad79-1b5f718fee29" class="">Erin</p>
+			<p id="f98937bf-a218-4701-959c-09b0dcc3b8a4" class="">Lulu</p>
+			<p id="9c0d22bf-d2f7-41cd-9411-1042f3af36d8" class="">Michelle</p>
+			<p id="78ca3a01-be17-4e97-bc22-7f8a33240658" class="">Sam Trevizo</p>
+			<p id="d855776c-5fb1-4f5a-baa1-a944609acfa2" class="">Carly</p>
+		</details></li></ul>
+		<ul id="d7f67de5-2308-49fc-9cc1-12cfaf0c853d" class="toggle">
+			<li><details close=""><summary>Hannah</summary>
+				<p id="7425fb4a-cb72-494c-86d0-56a32f72c521" class="">Angelica</p>
+				<p id="00984d3b-1ea7-4bff-b418-ff902e4861cb" class="">Sandra</p>
+				<p id="56a447aa-e9cf-48a6-8b70-1c15f57b0822" class="">Ana L</p>
+				<p id="7b957e5f-8563-45bb-9584-c05047c0803a" class="">Nicki</p>
+				<p id="c072103a-febd-49da-a141-67859a92d908" class="">Gracie</p>
+				<p id="b4fffd3a-b8eb-4085-a5c0-cf28be408636" class="">Sylvia</p>
+			</details></li></ul>
+			<ul id="bc669bca-fb3e-45d3-bf0b-69566e8d3f3d" class="toggle">
+				<li><details close=""><summary>Jackie, Monica</summary>
+					<p id="ab498eb8-9541-4e19-ae5e-56fc3e325fad" class="">Shelby</p>
+					<p id="11af47e7-04ab-47d2-b58b-e68e3ba91423" class="">Kaylana</p>
+					<p id="e4774af3-ced5-42f8-ab4e-aad505c1c587" class="">Kaitlyn</p>
+					<p id="ce339105-7fef-48d8-82c7-1ca18639e936" class="">Sam Munoz</p>
+					<p id="8b9e809c-5439-4be0-b831-8eae823595d7" class="">Marina</p>
+				</details></li></ul>
+				<ul id="a0ebadc8-05e3-4464-9d42-df02f06520dc" class="toggle">
+					<li><details close=""><summary>Bryant, Leo</summary>
+					<p id="f90447bc-8131-4b79-b0f9-68969939b404" class="">Josh</p>
+					<p id="5d56b731-cca9-488d-bbb8-15baf3cc3b6e" class="">Matt</p>
+					<p id="1c1b529f-22c3-4788-acc4-93fb442e584b" class="">Jack</p>
+				</details></li></ul><ul id="4f25778d-69f0-4498-912b-6b0d16a3e34a" class="toggle">
+					<li><details close=""><summary>Jason, Joel</summary>
+						<p id="7c2188d2-78ce-48f0-9b54-01a1cf57956d" class="">Franky</p>
+						<p id="9d831874-4c62-49d1-9fe2-a0fda6636294" class="">Josh Mckee</p>
+						<p id="fc42a8fd-b936-4362-9de5-ab736e92a454" class="">Evan</p>
+						<p id="66786a6a-cabd-48d9-8d51-199fca197ef9" class="">Paul</p>
+						<p id="00ceb13d-c4e7-4a78-b6a4-0a07caf292ca" class="">Jonathan</p>
+					</details></li></ul>
+					<p id="6bac0e54-e50e-4012-8163-4d4e076fdb73" class=""></p></div>
+
+<div id="9462e230-316c-4d8b-99e5-a3fcf01240f8" style="width:33.33333333333333%" class="column">
+	<p id="4d712770-c31a-40b6-bcbf-185bc05bd123" class="">Location:</p>
+	<p id="39457cb6-2f46-4a2f-b77c-dad541b700a2" class="">Jason, Joel —&gt; behind prayer room</p>
+	<p id="32b36ee8-8a2b-49c7-abc2-85335a44abb2" class="">Bryant, Leo —&gt; prayer room</p>
+	<p id="e7d5716e-4f4c-4233-b379-f33817fb9710" class="">Jackie/Monica —&gt; Couch room by storage</p>
+	<p id="86fdccee-08c9-4571-8dff-674e37de7cf8" class="">Amanda —&gt; Main room</p>
+	<p id="f4e93c4c-c058-427a-b421-b5cbba9a6de1" class="">Hannah —&gt;  Main room</p>
+	<p id="a10300d7-9bce-485c-abd7-06559b7ec57a" class="">
+</p></div></article></body></html>

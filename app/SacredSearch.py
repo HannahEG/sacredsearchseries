@@ -65,6 +65,11 @@ def Chapterfoureight():
 def Resourcesaddictions():
     return render_template("sexualAddictionnotes.html")
 
+@app.route("/separategroups")
+#---- Route will return the webpage with visualizations depicting turnout based on voter competitiveness
+def Resourcesgroups():
+    return render_template("separategroups.html")
+
 if __name__ == "__main__":
     app.run()
 
