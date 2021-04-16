@@ -60,6 +60,11 @@ def Chapterfivesixseven():
 def Chapterfoureight():
     return render_template("chapter48.html")
 
+@app.route("/resources")
+#---- Route will return the webpage with visualizations depicting turnout based on voter competitiveness
+def Resourcesaddictions():
+    return render_template("sexualAddictionnotes.html")
+
 if __name__ == "__main__":
     app.run()
 

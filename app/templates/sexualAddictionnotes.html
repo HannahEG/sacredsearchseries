@@ -1,0 +1,630 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Points for this Friday</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+	color:burlywood;
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="9f623e13-5354-4f4c-8283-b428cfcbc17e" class="page sans"><header><h1 class="page-title">Notes: Sexual Sin/Sexual Addiction</h1></header><div class="page-body"><p id="04b294d8-d80e-4602-bd85-6538b411759a" class="">
+<a href= "sacredsearch.herokuapp.com/facilitators"><b>Back</b></a>
+</p><p id="b0731e2e-2e55-4cbf-ace3-9962d84d8373" class="">Sexual Addiction/False Idols</p><p id="4aef474c-1398-4f1c-ba84-0a0320a41ce7" class="">Our culture is saturated with sex. Pornography, prostitution, premarital sex, and multiple sexual partners have all increased drastically in the last 50 years.</p><p id="3b3d5258-c670-44b6-9fe9-3155df3ec6f3" class="">In the 1950s, pornography was available in magazines only and age restricted. The internet makes porn widely available and widely unregulated.</p><p id="952fa1b9-4f32-4b88-ad0d-a238ec513964" class="">Recent studies have suggested that half of students at Christian universities lose their virginity while in school.</p><p id="d5bdc218-db1d-4595-935e-751ed00dc24b" class="">Oral sex has become highly prominent among young adults and youth in Christian circles in an attempt to remain virgins.</p><p id="c0bbcdfe-4a07-4480-b640-7e73fdbf8169" class="">40% of evangelical pastors admitted to looking at pornography. 60% of attendees at Promise Keepers conferences said they struggle with pornography. The use of in-room pornography increases at hotels hosting Christian conferences.</p><p id="29f675f9-c6d8-4edc-8e4f-bd4cfb7c5d42" class="">Researchers give conservative estimates that 10% of the general population struggles with some degree of sexual addiction.</p><p id="9f616cb1-74a0-43e9-83fc-20601c0be966" class=""><span style="border-bottom:0.05em solid"><strong>What classifies as sexual addiction?</strong></span><strong> </strong>Repetitive, progressive, unmanageable behaviors. <strong>Sexual sin is not the same as sexual addiction.</strong></p><ol id="b09b690c-7d51-4d6e-af66-ec8d2874aa4d" class="numbered-list" start="1"><li>Unmanageability – Feeling powerless and out of control. They have tried to stop and can’t. This leads to a cycle of addiction. Fantasy/preoccupation&gt;rituals&gt;acting out&gt; despair&gt;depression/suicidal thoughts&gt;repeat cycle in hopes of coping. Fear of consequences is not enough to stop them from sexual sin.</li></ol><ol id="f87c0902-6077-4183-93d7-87b460ccda92" class="numbered-list" start="2"><li>Neurochemical tolerance – Produces chemical tolerance in the brain to hormones adrenaline, serotonin, dopamine, and heroin-like catecholamines.</li></ol><ol id="d814b18a-56d5-46fc-b6af-14210349af77" class="numbered-list" start="3"><li>Progression – Tolerance leads to progression in order to achieve the same “high.” Always looks like spending more time consuming pornography or engaging in sexual experiences and could also include progressing to other types of more deviant activity</li></ol><ol id="407151a6-6666-44ae-bf38-a15736b1e0b9" class="numbered-list" start="4"><li>Feeling avoidance – Characterized by feelings of loneliness, anger, and anxiety. Sex is used to cope with these feelings by releasing neurochemicals to elevate or moderate mood.</li></ol><ol id="f6bd61b0-4a0f-454d-8289-e9b3049b7169" class="numbered-list" start="5"><li>Consequences – Negative consequences are inevitable. Spiritual-separation from God, emotional-more loneliness and isolation, financial, legal, physical-STDs or unplanned pregnancy, vocational, and social.</li></ol><p id="b7567dd2-4bb0-4d25-8dc0-65b7fe86140e" class="">Women suffer from sexual addiction just as frequently as men do yet are less likely to seek help because the stigma is often greater (men seen as “studs” and women seen as “sluts” or “whores”)</p><p id="db48635f-9e1c-4df3-92c8-53b8b79cdb93" class=""><span style="border-bottom:0.05em solid"><strong>What causes sexual addiction? </strong></span>Addicts may believe the only way to get their needs for love and nurture met is through sex and/or infatuated romance.</p><ol id="e9ee146c-feb0-4a77-9c08-c3e11e2030ac" class="numbered-list" start="1"><li>Emotional – Sex addicts are emotionally wounded. 81% of them were sexually abused; 74% were physically abused; and 97% were emotionally abused. Abuse can take two forms: invasive types (such as being sexually molested, physically hit, or emotionally yelled at) and abandonment types (sometimes called neglect). Abuse leads to feelings of loneliness, anger, fear, and confusion that change core beliefs. Addicts believe thigs like: I am a bad and worthless person. No one will love me as I am. No one will take care of me but me.</li></ol><ol id="337056c4-337a-47af-afa6-8d6c963be27e" class="numbered-list" start="2"><li>Relational – Addicts suffer from intimacy disorder. They feel that if they were really known, people would hate them and leave them. This predisposes them to lying and avoiding the truth. They long for approval and usually develop approval disorders which many have called “co-dependency.” This is at a deep level of their soul. They believe relationships or marriage will fix these attachment and intimacy problems.</li></ol><ol id="9650767e-345e-407e-84c9-a0aae45a0077" class="numbered-list" start="3"><li>Physical – Because of the neurochemical tolerance that is part of addiction, addicts are physically dependent on sex the same way a drug addict would be. 50% of sex addicts are also alcoholics. More severe abuse/neglect as a child increases likelihood of multiple addictions.</li></ol><ol id="38670e7e-aff0-408d-8e22-52d32c4b7df7" class="numbered-list" start="4"><li>Cognitive and Behavioral – Addicts have distorted cognitive beliefs and don’t know their true identity in Christ. They have unrealistic expectations of themselves and others which leads to irrational justifications for sexual sin.</li></ol><ol id="d504477f-b4ce-4809-b210-8bb29635567e" class="numbered-list" start="5"><li>Spiritual – Sexual addiction, at its core, is an act of rebellion against God. Sex is a false idol.</li></ol><p id="a0f3db32-8e62-4e69-8fd3-9ad995feeb74" class=""><span style="border-bottom:0.05em solid"><strong>How can sexual addiction be treated?</strong></span></p><ol id="c7dd5f16-56a9-4b9e-89f5-8c5003e003f4" class="numbered-list" start="1"><li>Emotional – Treating underlying trauma wounds from abuse through counseling. Sex is often used to numb trauma. Shame is the by-product of trauma and spiritual truth is an essential part of treatment. Grieving what was lost through trauma is part of the healing process. Finding meaning in trauma helps lead to healing. The final part of healing from trauma is forgiving the offender(s).<ol id="564fc6a5-3e1e-48cc-80a9-41974acc1f39" class="numbered-list" start="1"><li>Psalm 139, Rom 8:28, Matt 11:28-30</li></ol><ol id="6e768822-8b35-4a1e-a7cc-9f22f1fdbdd9" class="numbered-list" start="2"><li>Fantasies are trying to teach us about pain. Every fantasy is an attempt to heal a wound from the past. In the fantasy a person will create ways to stop the memory of harm or ways to get love and nurture that was missed. If a fantasy is explored in relation to how it connects to the past, and if healing from those wounds is sought, the fantasy will go away.</li></ol></li></ol><ol id="498cae8d-30a1-4ffc-8044-8030783005f1" class="numbered-list" start="2"><li>Relational – Learning to connect intimately through support groups and community in which vulnerability is fostered and healthy boundaries are maintained.</li></ol><ol id="63991f72-239d-4fcb-a202-3112dd415553" class="numbered-list" start="3"><li>Physical – Period of complete abstinence to break neurochemical dependency. Physical self care such as proper diet, adequate sleep, and exercise is important. STD screening may be necessary. Underlying mental health conditions, if any, need to be addressed.<ol id="47a94907-2b92-44da-893c-14ca12a46a41" class="numbered-list" start="1"><li>1 Cor 7:5 (within the context of marriage)</li></ol></li></ol><ol id="fb9c87d5-c0be-4f8f-b39c-777e3ec22fbd" class="numbered-list" start="4"><li>Cognitive and Behavioral – Replacing wounded core beliefs with Scriptural truth. Finding and maintaining accountability. Accountability is with same gender. Accountability based on Nehemiah:<ol id="d0f4821a-cc83-4ca7-b704-1c942daf7752" class="numbered-list" start="1"><li>Begins with willingness and brokenness</li></ol><ol id="a30a209d-94ec-4c78-96c2-53d6291652a2" class="numbered-list" start="2"><li>Begins with confession and spirit of repentance (Neh 1)</li></ol><ol id="3e657565-3bef-4dca-a3b7-259aafa041ab" class="numbered-list" start="3"><li>Maintained in groups of men or women committed to sexual purity (Neh 2:9)</li></ol><ol id="79ed346b-1dbc-4bc6-9097-d27d117ef9fe" class="numbered-list" start="4"><li>Purging all toxicity (pornography, affairs, secret phone numbers, irrational thinking, etc.) (Neh 3:14)</li></ol><ol id="2c11d34c-a6fc-42ed-a106-e214ef38af15" class="numbered-list" start="5"><li>Identify the enemy and areas of personal vulnerability</li></ol><ol id="4cf6c175-1040-4634-8191-d5bb0ccc4619" class="numbered-list" start="6"><li>Prepare for temptation before it happens</li></ol><ol id="6576c832-7eb4-4035-acd4-b93f13c2c263" class="numbered-list" start="7"><li>Accountable to add positive actions and defend against negative ones</li></ol><ol id="99c555bd-5ece-4447-9949-cd10672cf3b7" class="numbered-list" start="8"><li>Find higher calling or purpose (motivation) to recover such as family, home, etc. (Neh 4:14)</li></ol></li></ol><ol id="536d952f-4bf0-4693-a3d8-5e29f94dcec3" class="numbered-list" start="5"><li>Spiritual – Answer three spiritual questions to begin healing journey.<ol id="dbc8d97b-1202-46d1-b55a-9f9bd92c9195" class="numbered-list" start="1"><li>Do you want to get well? - Have you adopted the attitude of being addicted? Willingness to change and give control to God. (John 5:6)</li></ol><ol id="2b0b9648-06e7-4388-b2dd-2cf1e744b677" class="numbered-list" start="2"><li>What are you thirsty for? - Must desire Christ. (John 4:1-15)</li></ol><ol id="9454e33f-14f7-47fe-99ae-65c90b85ea28" class="numbered-list" start="3"><li>Are you willing to die to yourself? - Stop seeking magic solution and die to own control and power. (John 11)</li></ol></li></ol><p id="ea7d2a03-f853-4d9f-82e2-06fc3a7fecaa" class=""><span style="border-bottom:0.05em solid"><strong>How can we guard against sexual sin and idoaltry?</strong></span></p><p id="2cedf2cc-8855-4e7c-88d6-2c5aa2147642" class=""><em>How can a young man keep his way pure? By guarding it according to your word. -Psalm 119:9</em></p><p id="f331d8d7-b7f0-4c94-8d1e-c571bbc1917b" class="">Guarding our hearts</p><p id="7ff40f32-5e84-4e4a-8631-17975fd9e496" class="">Prv. 4:23, Matt 6:21, 1 Pet 5:7, John 10:10, Deut 4:8-10, Heb 12:14-15</p><p id="db325ddb-1ef7-47fa-8610-0e246401eea7" class="">How do we do this practically?</p><p id="feb790a8-67ba-4584-aacc-18ad2e851871" class="">Prayer!</p><p id="07f209b0-056d-4a27-8514-fabb6f3d9ec9" class="">Col 4:2, Psa 145:18, Acts 2:42, Eph 6:18, 1 Thess 5:17, Jam 5:13, Matt 7:7-8</p><p id="f4eb607b-9951-451a-8c1c-c15c7faf8c8b" class="">Guarding our minds</p><p id="63f09613-726d-42ba-981d-784d21c862dc" class="">Phil 4:6-8, 2 Cor 10:5, Rom 12:2, Col 3:2, Matt 22:37, Isa 26:3, Psa. 101:3, Eph 6:17</p><p id="a16f0b89-3e31-458c-8cdd-a570d5853d97" class="">How do we do this practically?</p><p id="9be73610-865f-4384-b048-3c46c6220280" class="">Prayer, Meditation, and Worship</p><p id="4be8be99-7cea-40ff-86e1-9238578cdaf3" class="">Mrk 11:24, Luk 18:1, Matt 6:5-8, 2 Chron 7:14, John 14:14, John 15:7, Jam 4:3, Jer 29:12</p><p id="07b29a7b-8aaa-431e-8455-4de7bea2a013" class="">Living in community/accountability</p><p id="88328a36-1ea7-4380-9291-f008d7483d6d" class="">Rom 14:12, Gal 6:1-5, Jam 5:16, 1 Thess 5:11, Prv. 27:17, Luk 17:3, Ecc 4:9-12, Heb 4:13, Jer      17:10</p><p id="3e360eb3-54c9-4535-8b2c-faaa4a5444ea" class="">Reading Scripture/daily quiet times</p><p id="1e67daa4-7ee4-4c29-877f-5772a6128999" class="">Matt 6:33, John 14:6, Heb 6:4-6, John 8:32, 2 Tim 3:16, 2 Cor 5:17, John 17:17, Psa 46:10, Jam 4:8, Psa 1:1-2, 2 Tim 2:15, Matt 14:22-23, Mrk 1:35-37</p></div></article></body></html>
