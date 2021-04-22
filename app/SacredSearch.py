@@ -60,6 +60,12 @@ def Chapterfivesixseven():
 def Chapterfoureight():
     return render_template("chapter48.html")
 
+@app.route("/chapter910")
+#---- Route will return the webpage with visualizations depicting turnout based on voter competitiveness
+def Chapternineten():
+    return render_template("chapter910.html")
+
+#FACILITATOR RESOURCE LINKS
 @app.route("/resources")
 #---- Route will return the webpage with visualizations depicting turnout based on voter competitiveness
 def Resourcesaddictions():
@@ -69,6 +75,7 @@ def Resourcesaddictions():
 #---- Route will return the webpage with visualizations depicting turnout based on voter competitiveness
 def Resourcesgroups():
     return render_template("separategroups.html")
+
 
 if __name__ == "__main__":
     app.run()
