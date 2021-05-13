@@ -70,6 +70,10 @@ def Chapternineten():
 def Chaptereleventwelvethirteen():
     return render_template("chapter11-13.html")
 
+@app.route("/chapter1415")
+def Chapterfourteenfifteen():
+    return render_template("chapter1415.html")
+
 @app.route("/chapter1617")
 #---- Route will return the webpage with visualizations depicting turnout based on voter competitiveness
 def Chaptersixteenseventeen():
