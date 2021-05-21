@@ -79,6 +79,11 @@ def Chapterfourteenfifteen():
 def Chaptersixteenseventeen():
     return render_template("chapter1617.html")
 
+@app.route("/chapter1819E")
+#---- Route will return the webpage with visualizations depicting turnout based on voter competitiveness
+def Chaptereighteennineteenepilogue():
+    return render_template("chapter1819E.html")
+
 #FACILITATOR RESOURCE LINKS
 @app.route("/resources")
 #---- Route will return the webpage with visualizations depicting turnout based on voter competitiveness
